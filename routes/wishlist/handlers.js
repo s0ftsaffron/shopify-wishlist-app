@@ -1,7 +1,7 @@
 import ApplicationError from '../../errors/ApplicationError.js';
 
 const {
-  METAFIELD_NAMESPACE = 'shopify_wishlist_app',
+  METAFIELD_NAMESPACE = 'user',
   METAFIELD_KEY = 'wishlist',
 } = process.env;
 
