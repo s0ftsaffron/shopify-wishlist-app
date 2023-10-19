@@ -16,6 +16,7 @@ express()
     origin: 'https://littlestbrainrot.com',  // Your domain
     methods: ['GET', 'POST'],
   }))
+  .use(express.static('public'))  // Add this line
   .use('/', routes)
   .use(errorHandler)
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
