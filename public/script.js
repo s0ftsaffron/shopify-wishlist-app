@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     // This is where you'd fetch your logs data from the backend/API
-    fetch('https://lb-dedotated-wam-7ee0c443df6c.herokuapp.com')
-    .then(response => response.json())
+    fetch('https://lb-dedotated-wam-7ee0c443df6c.herokuapp.com/logs')  // <-- Changed this to /logs
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         const logDataElem = document.getElementById('logData');
         
